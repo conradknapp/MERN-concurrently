@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MenuButton from './MenuButton';
 import Menu from './Menu';
 import '../style.css';
+import { NavLink as Link } from 'react-router-dom';
 
 class Navbar extends Component {
   constructor(props, context) {
@@ -17,8 +18,6 @@ class Navbar extends Component {
 
   handleMouseDown(e) {
     this.toggleMenu();
- 
-    console.log("clicked");
     e.stopPropagation();
   }
 
@@ -73,7 +72,9 @@ class Navbar extends Component {
             <g>
             </g>
             </svg>
-        <h1 id="NavbarTitle">Recipes</h1>
+        <Link to="/" style={{ color: 'white' }} id="NavbarTitle">
+          <h1 id="NavbarTitle">Recipes</h1>
+        </Link>
         <MenuButton handleMouseDown={this.handleMouseDown} />
         <Menu handleMouseDown={this.handleMouseDown}
           menuVisibility={this.state.visible}/>

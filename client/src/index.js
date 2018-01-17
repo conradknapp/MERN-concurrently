@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RecipeCard from './components/RecipeCard';
-import './style.css'
+import { BrowserRouter } from 'react-router-dom';
+import './style.css';
+import App from './App';
 
 ReactDOM.render(
-  <RecipeCard url='http://localhost:5000/api/comments' />,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );

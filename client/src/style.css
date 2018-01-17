@@ -8,6 +8,7 @@
 body {
   background-color: var(--main-background-color);
   font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
 }
 
 /* Cards Section */
@@ -29,9 +30,6 @@ body {
 	display: flex;
 	flex-direction: column;
   justify-content: flex-end;
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-size: 30px 10px;
   box-shadow: -3px 3px 10px 0px rgba(168, 168, 168, 0.4);
   text-align: center;
   font-size: 18px;
@@ -141,6 +139,10 @@ body {
   top: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 #NavbarTitle {
   align-self: center;
   grid-column: span 8;
@@ -197,7 +199,7 @@ body {
   transform: all 0.3s;
   height: 40px;
   display: none;
-  transform: translate(28px, -28px);
+  transform: translate(28px, -32px);
 }
 
 .ChangeFill {
@@ -309,6 +311,7 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3em;
+  letter-spacing: 2px;
   position: relative;
   padding-top: 100px;
   padding-bottom: 0;
@@ -330,6 +333,7 @@ body {
 #Showcase p {
   position: relative;
   color: white;
+  letter-spacing: 1px;
   animation: content 1.2s forwards ease-out;
 }
 
@@ -372,14 +376,24 @@ footer {
   flex-direction: column;
 }
 
-footer a:not(.btn) {
+.FooterLink {
   color: white;
   text-decoration: none;
   box-shadow: 0 -0.1em #066fb9 inset, 0 -1em transparent inset;
   transition: box-shadow .2s;
 }
 
-footer a:not(.btn):hover {
+.FooterLink:hover {
+  box-shadow: 0 -1em #066fb9 inset, 0 -1em transparent inset;
+}
+
+.ArticleLink {
+  text-decoration: none;
+  box-shadow: 0 -0.1em #066fb9 inset, 0 -1em transparent inset;
+  transition: box-shadow .2s;
+}
+
+.ArticleLink:hover {
   box-shadow: 0 -1em #066fb9 inset, 0 -1em transparent inset;
 }
 
@@ -391,4 +405,40 @@ footer a:not(.btn):hover {
   #Showcase h1 {
     font-size: 2.5em;
   }
+}
+
+.RecipeShowcase {
+  height: 80vh;
+  width: 100vw;
+}
+
+.RecipeShowcase:after {
+	content: '';
+	position: absolute;
+  width: 100%;
+  height: 80vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+	opacity: 0.25;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.ArticleContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Article {
+  width: 80vw;
+  background: whitesmoke;
+  padding: 1em 1em;
+}
+
+.Article h1 {
+  text-align: center;
+}
+
+.FancyLine {
+  border-width: 1px 0px 0px;
+  border-top: 1px solid rgb(225, 225, 225);
 }

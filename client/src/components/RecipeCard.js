@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import RecipeInfo from './RecipeInfo';
-import Navbar from './Navbar';
-import Showcase from './Showcase';
-import Footer from './Footer';
 
 class RecipeCard extends Component {
   constructor(props) {
@@ -22,13 +19,10 @@ class RecipeCard extends Component {
     this.loadRecipes();
   }
 
-  render() {
+    render() {
       return (
         <div>
-          <Navbar />
-          <Showcase />
           <RecipeInfo data={ this.state.data } />
-          <Footer />
         </div>
       )
     }
