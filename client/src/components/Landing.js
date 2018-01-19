@@ -6,7 +6,7 @@ import RecipeCard from './RecipeCard';
 const Landing = () => (
   <div>
     <Showcase />
-    <RecipeCard url='http://localhost:5000/api/comments' />
+    <RecipeCard url='http://localhost:5000/api/recipes' />
   </div>
 )
 
