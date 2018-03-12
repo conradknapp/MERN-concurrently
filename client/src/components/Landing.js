@@ -1,5 +1,4 @@
 import React from 'react';
-import '../style.css';
 import Showcase from './Showcase';
 import RecipeCard from './RecipeCard';
 

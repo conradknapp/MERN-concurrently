@@ -1,39 +1,61 @@
 import React, { Component } from "react";
 import "../style.css";
- 
-class Showcase extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      "pizzaDisplay": "none",
-      "textVisibility": "visible"
-    }
+class Showcase extends Component {
+  state = {
+    pizzaDisplay: "none",
+    textVisibility: "visible"
   };
 
-  toggleIcon() {
+  toggleIcon = () => {
     const css = this.state.pizzaDisplay === "none" ? "block" : "none";
     const css2 = this.state.textVisibility === "visible" ? "hidden" : "visible";
-    this.setState({ "pizzaDisplay": css, "textVisibility": css2 });
-  }
+    this.setState({ pizzaDisplay: css, textVisibility: css2 });
+  };
 
-  iconClick() {
-    document.querySelector('#pizza').classList.toggle('ChangeFill');
-  }
+  iconClick = () => {
+    document.querySelector("#pizza").classList.toggle("ChangeFill");
+  };
 
   render() {
     return (
       <header id="Showcase">
-        <div id="ShowcaseImg"></div>
+        <div id="Showcase__Image" />
         <div className="ContentWrap">
           <h1>Your Answer for Tonight's Dinner</h1>
-          <p>A place for practical, delicious, and simple recipes that you'll come back to <u><em>again and again.</em></u></p>
-          <a href="#section-b" onMouseEnter={this.toggleIcon.bind(this)} onMouseLeave={this.toggleIcon.bind(this)} onClick={this.iconClick} className="btn btn-main">
-          <span className="btn-text" style={ { visibility: this.state.textVisibility } }>See Recipes</span> 
-          <span className="btn-icon">
-            <svg version="1.1" id="pizza" style={ { display: this.state.pizzaDisplay } } xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-              viewBox="0 0 448.898 448.898"> 
-              <path id="XMLID_1423_" d="M110.646,307.839c0,3.866-3.134,7-7,7h-1.866c-3.866,0-7-3.134-7-7s3.134-7,7-7h1.866
+          <p>
+            A place for simple, practical, and delicious recipes that you'll
+            come back to{" "}
+            <u>
+              <em>again and again.</em>
+            </u>
+          </p>
+          <a
+            href="#section-b"
+            onMouseEnter={this.toggleIcon}
+            onMouseLeave={this.toggleIcon}
+            onClick={this.iconClick}
+            className="btn btn-main"
+          >
+            <span
+              className="btn-text"
+              style={{ visibility: this.state.textVisibility }}
+            >
+              See Recipes
+            </span>
+            <span className="btn-icon">
+              <svg
+                version="1.1"
+                id="pizza"
+                style={{ display: this.state.pizzaDisplay }}
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                viewBox="0 0 448.898 448.898"
+              >
+                <path
+                  id="XMLID_1423_"
+                  d="M110.646,307.839c0,3.866-3.134,7-7,7h-1.866c-3.866,0-7-3.134-7-7s3.134-7,7-7h1.866
                 C107.512,300.839,110.646,303.973,110.646,307.839z M67.648,243.445h-1.865c-3.866,0-7,3.134-7,7s3.134,7,7,7h1.865
                 c3.866,0,7-3.134,7-7S71.515,243.445,67.648,243.445z M135.299,186.951h-1.867c-3.866,0-7,3.134-7,7c0,3.866,3.134,7,7,7h1.867
                 c3.866,0,7-3.134,7-7C142.299,190.084,139.165,186.951,135.299,186.951z M178.345,95.274h-1.864c-3.866,0-7,3.134-7,7
@@ -89,45 +111,30 @@ class Showcase extends Component {
                 c-3.866,0-7,3.134-7,7S190.854,147.535,194.721,147.535z M139.072,262.14c0,12.366-10.061,22.426-22.427,22.426
                 c-12.365,0-22.425-10.06-22.425-22.426s10.06-22.426,22.425-22.426C129.012,239.714,139.072,249.774,139.072,262.14z
                 M125.072,262.14c0-4.646-3.78-8.426-8.427-8.426c-4.646,0-8.425,3.78-8.425,8.426s3.779,8.426,8.425,8.426
-                C121.292,270.565,125.072,266.786,125.072,262.14z"/>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                <g>
-                </g>
-                </svg>
-
-          </span>
+                C121.292,270.565,125.072,266.786,125.072,262.14z"
+                />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+              </svg>
+            </span>
           </a>
         </div>
       </header>
-    )
+    );
   }
 }
- 
+
 export default Showcase;
