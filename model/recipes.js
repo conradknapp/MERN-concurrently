@@ -7,8 +7,11 @@ const RecipesSchema = new Schema({
   postType: String,
   date: {
     type: Date,
-    default: Date.now
-  }
+    default: new Date()
+  },
+  summary: String,
+  ingredients: String,
+  instructions: String
 });
 
 module.exports = mongoose.model("Recipe", RecipesSchema);
