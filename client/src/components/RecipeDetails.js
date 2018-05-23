@@ -3,6 +3,7 @@ import axios from "axios";
 import CalendarIcon from "./CalendarIcon";
 import TagsIcon from "./TagsIcon";
 import MailIcon from "./MailIcon";
+import { withRouter } from "react-router-dom";
 
 class RecipeDetails extends Component {
   state = {
@@ -14,9 +15,9 @@ class RecipeDetails extends Component {
   }
 
   getRecipe = () => {
-    const recipeId = this.props.match.params.id;
+    const { id } = this.props.match.params;
     axios
-      .get(`http://localhost:5000/api/recipes/${recipeId}`)
+      .get(`http://localhost:5000/api/recipes/${id}`)
       .then(({ data }) => {
         console.log(data);
         this.setState({ details: data });
@@ -73,4 +74,4 @@ class RecipeDetails extends Component {
   }
 }
 
-export default RecipeDetails;
+export default withRouter(RecipeDetails);

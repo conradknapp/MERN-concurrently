@@ -1,12 +1,12 @@
-import React from 'react';
-import Showcase from './Showcase';
-import RecipeCard from './RecipeCard';
+import React from "react";
+import Showcase from "./Showcase";
+import RecipeCard from "./RecipeCard";
 
 const Landing = () => (
   <div>
     <Showcase />
-    <RecipeCard url='http://localhost:5000/api/recipes' />
+    <RecipeCard />
   </div>
-)
+);
 
 export default Landing;
